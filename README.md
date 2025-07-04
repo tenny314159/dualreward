@@ -40,9 +40,9 @@ Prediction script specifically designed for RACE-style cloze tests. Tailored to 
 Handles preprocessing of the RACE dataset. Includes tasks such as data cleaning, extracting key information (paragraphs, questions, answers), and format conversion, transforming raw data into a standardized form suitable for downstream processes.
 
 
-# DualReward：一种面向完形填空干扰项生成的动态强化学习框架
+# DualReward：A Dynamic Reinforcement Learning Framework for Cloze Tests Distractor Generation
 
-本仓库包含论文《DualReward: A Dynamic Reinforcement Learning Framework for Cloze Tests Distractor Generation》的官方实现。
+本仓库包含论文《DualReward: A Dynamic Reinforcement Learning Framework for Cloze Tests Distractor Generation》的实现。
 
 ---
 
