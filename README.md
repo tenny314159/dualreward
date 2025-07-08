@@ -6,9 +6,6 @@ This repository contains the official implementation of the paper *"DualReward: 
 
 ## 🔍 Script Descriptions
 
-### 📊 `analysis_race.py`
-Performs analysis on the RACE dataset. It can explore characteristics such as paragraph length distribution, question type proportions, and patterns in correct answers and distractors to better understand the dataset.
-
 ### 📁 `create_file.py`
 Responsible for file creation tasks. It can be used to set up structured data files, create directories for storing predictions or evaluation reports, and initialize log files to standardize the project's file system.
 
@@ -33,11 +30,6 @@ Basic distractor prediction script. Generates candidate distractors for cloze te
 ### 📦 `predict_all.py`
 Batch prediction script for large-scale datasets. Can generate distractors for all cloze test questions in a dataset (train, validation, test sets, etc.) at once, improving processing efficiency.
 
-### 🎯 `predict_race.py`
-Prediction script specifically designed for RACE-style cloze tests. Tailored to the structure and requirements of the RACE dataset to generate suitable distractors for this type of question.
-
-### 🛠️ `process_race.py`
-Handles preprocessing of the RACE dataset. Includes tasks such as data cleaning, extracting key information (paragraphs, questions, answers), and format conversion, transforming raw data into a standardized form suitable for downstream processes.
 
 
 # DualReward：A Dynamic Reinforcement Learning Framework for Cloze Tests Distractor Generation
@@ -47,9 +39,6 @@ Handles preprocessing of the RACE dataset. Includes tasks such as data cleaning,
 ---
 
 ## 🔍 脚本说明
-
-### 📊 `analysis_race.py`
-针对 RACE 数据集开展分析工作。可挖掘诸如段落长度分布、题目类型占比、正确答案与干扰项模式等信息，辅助理解数据集特性。
 
 ### 📁 `create_file.py`
 承担文件创建职责。可用于搭建特定结构的数据文件、创建预测结果或评估报告的存储目录，也可初始化日志文件，规范项目文件体系。
@@ -75,8 +64,3 @@ Handles preprocessing of the RACE dataset. Includes tasks such as data cleaning,
 ### 📦 `predict_all.py`
 面向大规模数据的预测脚本，可一次性对整个数据集（训练集、验证集、测试集等）的完形填空题目生成干扰项，提升批量处理效率。
 
-### 🎯 `predict_race.py`
-专为 RACE 格式完形填空设计的预测脚本，贴合 RACE 数据集结构与要求，生成适配该类题目的干扰项。
-
-### 🛠️ `process_race.py`
-负责 RACE 数据集处理，涵盖数据清洗、关键信息（段落、题目、答案等）提取，以及格式转换，将原始数据处理为适配后续流程的规范形式。
