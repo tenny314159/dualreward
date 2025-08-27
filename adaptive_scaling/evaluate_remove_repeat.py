@@ -7,10 +7,10 @@ from collections import Counter
 
 
 def sort_by_frequency(lst):
-    # 统计每个元素的出现次数
+    
     count = Counter(lst)
     unique_list = list(dict.fromkeys(lst))
-    # 按照出现次数排序，出现次数多的排前面，如果出现次数相同，则按照元素在列表中的第一次出现的顺序
+    
     return sorted(unique_list, key=lambda x: (-count[x], lst.index(x)))
 
 
@@ -162,10 +162,10 @@ def ndcg_at_k(r, k):
         return 0.
     return dcg_at_k(r, k) / idcg
 
-train_num = 'train58'
+train_num = 'train59'
 
 # path of the result
-result_path = '/media/disk3/CXL/DG/wang-2023/result/%s_result/%s_checkpoint-11600.csv' % (train_num, train_num)
+result_path = '/result/%s_result/%s_checkpoint-11600.csv' % (train_num, train_num)
 df = pd.read_csv(result_path)
 
 # evaluation = evaluate(df)

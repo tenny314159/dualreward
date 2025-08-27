@@ -130,10 +130,10 @@ def ndcg_at_k(r, k):
         return 0.
     return dcg_at_k(r, k) / idcg
 
-train_num = 'train23'
+train_num = 'train59'
 
 # path of the result
-result_path = '/media/disk3/CXL/DG/wang-2023/result/%s_result/%s_checkpoint-77616.csv' % (train_num, train_num)
+result_path = '/result/%s_result/%s_checkpoint-77616.csv' % (train_num, train_num)
 df = pd.read_csv(result_path)
 
 # evaluation = evaluate(df)

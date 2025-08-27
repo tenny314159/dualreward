@@ -1,6 +1,6 @@
 import os
 
-train_num = 'train63'
+train_num = 'train59'
 
 if not os.path.exists('./data/%s_data' % train_num):
     os.makedirs('./data/%s_data' % train_num)

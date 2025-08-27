@@ -2,11 +2,11 @@
 import pandas as pd
 from transformers import T5Tokenizer
 
-MODEL = '/media/disk3/CXL/DG/model/t5-base'
+MODEL = '/model/t5-base'
 
 tokenizer = T5Tokenizer.from_pretrained(MODEL)
 
-df = pd.read_csv('data/train33_data/CLOTH-F-train(k=10)-count-bigger-0.csv')
+df = pd.read_csv('data/train59_data/CLOTH-F-train(k=10)-count-bigger-0.csv')
 
 df['token_length'] = df['target'].apply(lambda x: len(tokenizer(x, add_special_tokens=False)['input_ids']))
 

@@ -48,7 +48,7 @@ class RewardDataCollatorForSeq2Seq(DataCollatorForSeq2Seq):
         return batch
 
 
-MODEL = '/media/disk3/CXL/DG/model/t5-base'
+MODEL = '/model/t5-base'
 train_num = 'train59'
 
 max_input_length = 128
@@ -253,7 +253,6 @@ finally:
         "avg_loss": avg_loss_list
     }).to_csv(output_dir / f"training_metrics_{train_num}.csv", index=False)
 
-    print(f"训练指标已保存到: {output_dir}")
 
     plt.figure(figsize=(12, 5))
 
