@@ -17,7 +17,7 @@ Basic evaluation script. Basic evaluation script that calculates core metrics su
 ####  `evaluate_remove_repeat.py`
 Advanced evaluation script. Introducing "de duplication" logic and removing answer operations. Remove duplicate distractors and answer before evaluation to avoid redundant content affecting the results and make the evaluation more accurate.
 
-####  ` candidate set_generate_distractors_top.py`
+####  `candidate_set_generate_distractors_top.py`
 Uses a pre-trained BERT model to generate 7 non-repetitive distractors. Updates the "target" column with the original top 3 targets plus the new distractors. Extract the first 3 original targets from the "target" column, use the model to predict up to 20 potential distractors from the "source" text, filter out distractors that overlap with original targets to get 7 valid ones, combine these distractors with the original targets to update the "target" column, generate 10 candidate distractors and record the distractors' scores.
 
 ####  `max_input_length.py`
