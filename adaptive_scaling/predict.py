@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 train_num = 'train59'
 
-model_file = '/media/disk3/CXL/DG/wang-2023/model_output/%s_model/checkpoint-61880' % train_num
+model_file = '/model_output/%s_model/checkpoint-61880' % train_num
 
 translator = pipeline("text2text-generation", model=model_file, device=0)
 
