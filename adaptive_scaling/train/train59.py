@@ -65,8 +65,8 @@ logging.basicConfig(filename='../log.txt',
                     filemode='a+'
                     )
 
-df_train = pd.read_csv('/media/disk3/CXL/DG/wang-2023/data/%s_data/CLOTH-F-train(k=7)-without-repeat.csv' % train_num)
-df_val = pd.read_csv('/media/disk3/CXL/DG/wang-2023/data/%s_data/CLOTH-F-valid.csv' % train_num)[:1000]
+df_train = pd.read_csv('/data/%s_data/CLOTH-F-train(k=7)-without-repeat.csv' % train_num)
+df_val = pd.read_csv('/data/%s_data/CLOTH-F-valid.csv' % train_num)[:1000]
 
 if "target" not in df_train.columns or "target" not in df_val.columns:
     raise ValueError("The dataset does not contain the 'target' column.")
@@ -90,15 +90,15 @@ input_ids_to_index = {tuple(input_ids): index for index, input_ids in enumerate(
 import pickle
 
 pickle.dump(tokenized_train, open(
-    '/media/disk3/CXL/DG/wang-2023/data/%s_data/CLOTH-F-train(k=7)-without-repeat.pkl' % train_num,
+    '/data/%s_data/CLOTH-F-train(k=7)-without-repeat.pkl' % train_num,
     'wb'))
-pickle.dump(tokenized_val, open('/media/disk3/CXL/DG/wang-2023/data/%s_data/CLOTH-F-valid.pkl' % train_num, 'wb'))
+pickle.dump(tokenized_val, open('/data/%s_data/CLOTH-F-valid.pkl' % train_num, 'wb'))
 
 ds_train = pickle.load(
     open(
-        '/media/disk3/CXL/DG/wang-2023/data/%s_data/CLOTH-F-train(k=7)-without-repeat.pkl' % train_num,
+        '/data/%s_data/CLOTH-F-train(k=7)-without-repeat.pkl' % train_num,
         'rb'))
-ds_valid = pickle.load(open('/media/disk3/CXL/DG/wang-2023/data/%s_data/CLOTH-F-valid.pkl' % train_num, 'rb'))
+ds_valid = pickle.load(open('/data/%s_data/CLOTH-F-valid.pkl' % train_num, 'rb'))
 
 print("Loaded train dataset columns:", ds_train.column_names)
 print("Sample original_target values in loaded train dataset:", ds_train['original_target'][:5])
